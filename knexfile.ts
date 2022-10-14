@@ -1,8 +1,6 @@
 import type { Knex } from "knex";
 require("dotenv").config();
 
-// Update with your config settings.
-
 const config: { [key: string]: Knex.Config } = {
   development: {
     client: "pg",
@@ -50,4 +48,4 @@ const config: { [key: string]: Knex.Config } = {
   },
 };
 
-module.exports = config;
+export default config;
