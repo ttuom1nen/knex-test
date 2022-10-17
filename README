@@ -5,12 +5,12 @@ Migrations are used to define sets of schema changes for updating the database.
 requires ts-node package
 Created into ./data/migrations/
 
-knex migrate:make todo
+knex migrate:make todos
 knex migrate:latest
 
 Seeds:
 Seed files allow you to populate your database with test or seed data independent of your migration files.
 Craeted into ./data/seeds/
 
-knex seed:make todo
+knex seed:make todos
 knex seed:run
