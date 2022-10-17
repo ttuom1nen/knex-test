@@ -4,9 +4,10 @@ import { Todo } from "../../models";
 
 const todosRouter = express.Router();
 
-todosRouter.get("/", async (req: Request, res: Response): Promise<void> => {
+todosRouter.get("/todos", async (req: Request, res: Response): Promise<void> => {
   const todos: Todo[] = await knex("todos");
-  res.send(todos);
+
+  res.status(200).send(todos);
 });
 
 export default todosRouter;
