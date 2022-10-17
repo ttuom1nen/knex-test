@@ -6,11 +6,12 @@ requires ts-node package
 Created into ./data/migrations/
 
 knex migrate:make todos
-knex migrate:latest
+knex migrate:latest = npm run migrate
+knex migrate:rollback = npm run unmigrate
 
 Seeds:
 Seed files allow you to populate your database with test or seed data independent of your migration files.
-Craeted into ./data/seeds/
+Created into ./data/seeds/
 
 knex seed:make todos
-knex seed:run
+knex seed:run = npm run seed
