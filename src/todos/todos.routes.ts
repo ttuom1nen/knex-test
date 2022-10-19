@@ -15,6 +15,20 @@ todosRouter.get(
   }
 );
 
+todosRouter.get(
+  "/todos/:id",
+  async (req: Request, res: Response): Promise<void> => {
+    const { id } = req.params;
+    const todos: Todo[] = await knex("todos").select("*").where("todos.id", id);
+
+    if (!todos.length) {
+      res.status(404);
+    }
+
+    res.send(todos);
+  }
+);
+
 todosRouter.post(
   "/todos",
   validateBody<Todo>(todosSchema),
