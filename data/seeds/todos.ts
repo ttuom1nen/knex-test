@@ -1,13 +1,13 @@
 import { Knex } from "knex";
 
 export async function seed(knex: Knex): Promise<void> {
-    // Deletes ALL existing entries
-    await knex("todos").del();
+  // Deletes ALL existing entries
+  await knex("todos").del();
 
-    // Inserts seed entries
-    await knex("todos").insert([
-        { id: 1, task: "rowValue1" },
-        { id: 2, task: "rowValue2" },
-        { id: 3, task: "rowValue3" }
-    ]);
-};
+  // Inserts seed entries
+  await knex("todos").insert([
+    { task: "rowValue1" },
+    { task: "rowValue2" },
+    { task: "rowValue3" },
+  ]);
+}
