@@ -47,7 +47,36 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"task\": \"Task from postman\"\r\n}"
+					"raw": "{\r\n    \"task\": \"Another task from postman\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3008/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3008",
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update todo",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"4\",\r\n    \"task\": \"Updated\"\r\n}"
 				},
 				"url": {
 					"raw": "http://localhost:3008/todos",
